@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body id="app-body">
+  <div class="container fade-in">
+    <h1> Weather App</h1>
+    <p class="submitted">Submitted By: <b>Kamrun Nahar </b></p>
+    <p class="submitted">Submitted To: Abdullah Al Mamun</p>
+
+    <div class="search-bar">
+      <input type="text" id="city-input" placeholder="Enter city name (e.g., Dhaka)" />
+      <button id="search-button">Search</button>
+    </div>
+
+    <div id="message-box"></div>
+
+    <div id="weather-display" class="hidden">
+      <h2 id="location">Dhaka, BD</h2>
+      <p id="date-time">Tuesday 08:58 PM</p>
+      <h3 id="weather-condition">haze</h3>
+
+      <div id="temperature">29°C</div>
+
+      <div class="info-grid">
+        <div class="info-box">
+          <div id="humidity-value">70%</div>
+          <p>Humidity</p>
+        </div>
+        <div class="info-box">
+          <div id="wind-speed-value">1.03 m/s</div>
+          <p>Wind</p>
+        </div>
+        <div class="info-box">
+          <div id="min-temp-value">29°C</div>
+          <p>Min Temp</p>
+        </div>
+        <div class="info-box">
+          <div id="max-temp-value">29°C</div>
+          <p>Max Temp</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="forecast">
+        <h3>5-Day Forecast</h3>
+        <div class="forecast-controls">
+          <button id="prev-day">Previous Day</button>
+          <div class="forecast-card">
+            <h4 id="forecast-day-name">Today</h4>
+            <h2 id="forecast-temp">28°C</h2>
+            <p id="forecast-condition">broken clouds</p>
+          </div>
+          <button id="next-day">Next Day</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

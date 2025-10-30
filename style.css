@@ -1,0 +1,196 @@
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+    }
+    *body {
+      background: linear-gradient(135deg, #41c990, #418ace);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background 0.8s ease-in-out;
+      padding: 20px;
+    }
+    .container {
+      width: 100%;
+      max-width: 600px;
+      text-align: center;
+      color: #fff;
+      padding: 40px 30px;
+      border-radius: 25px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .submitted {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    .search-bar {
+      margin: 20px 0 30px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    #city-input {
+      width: 70%;
+      padding: 12px 15px;
+      border-radius: 10px; 
+      border: none;
+      outline: none;
+      font-size: 1rem;
+    }
+    #search-button {
+      background: linear-gradient(135deg, #41c990, #418ace);
+      border: none;
+      border-radius: 10px;
+      padding: 12px 20px;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    #search-button:hover {
+      opacity: 0.85;
+    }
+    #message-box {
+      display: none;
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 10px;
+      font-weight: 600;
+      color: #fff;
+    }
+    #weather-display.hidden { display: none; }
+
+    h2#location {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    #date-time {
+      font-size: 0.95rem;
+      opacity: 0.9;
+      margin-bottom: 5px;
+    }
+    #weather-condition {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      text-transform: capitalize;
+    }
+    #temperature {
+      font-size: 4rem;
+      font-weight: 700;
+      margin: 10px 0;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .info-box {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 15px;
+      border-radius: 15px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    hr {
+      margin: 30px 0;
+      border: none;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .forecast {
+      margin-top: 20px;
+    }
+    .forecast h3 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+    .forecast-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .forecast-controls button {
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .forecast-controls button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .forecast-card {
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 20px;
+      padding: 20px 30px;
+      text-align: center;
+    }
+    .forecast-card h4 {
+      font-weight: 600;
+    }
+    .forecast-card h2 {
+      margin: 5px 0;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    .forecast-card p {
+      text-transform: capitalize;
+    }
+
+    @media (max-width: 640px) {
+      .container { padding: 25px 20px; }
+      h1 { font-size: 1.6rem; }
+      #temperature { font-size: 3rem; }
+      .info-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    }
+
+
+body {
+      font-family: "Poppins", sans-serif;
+      min-height: 100vh;
+      transition: background 1s ease-in-out;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 640px) {
+      h1 { font-size: 1.8rem; }
+      #temperature { font-size: 3rem; }
+      .grid { grid-template-columns: 1fr 1fr !important; }
+    }
+  
